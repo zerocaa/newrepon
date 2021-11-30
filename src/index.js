@@ -56,6 +56,9 @@ app.use(morgan("combined"));
     app.get("/accountManagement", (req, res) => {
     res.render("accountManagement");
     }); 
+    app.get("/newDetail", (req, res) => {
+    res.render("newDetail");
+    });
 
   
     app.listen(port, () => {
