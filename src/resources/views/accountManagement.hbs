@@ -151,3 +151,70 @@
     </div>
   </div>
 </div>
+<script>
+  const pass_field2 = document.querySelector('#password_confirmation');
+  const show_btn2 = document.querySelector('.fa-eye-2')
+  show_btn2.addEventListener("click", function () {
+    if (pass_field2.type === "password") {
+      pass_field2.type = "text";
+      show_btn2.classList.add("hide");
+    } else {
+      pass_field2.type = "password";
+      show_btn2.classList.remove("hide");
+    }
+  });
+</script>
+<script>
+  const pass_field3 = document.querySelector('#password-confirm');
+  const show_btn3 = document.querySelector('.fa-eye-3')
+  show_btn3.addEventListener("click", function () {
+    if (pass_field3.type === "password") {
+      pass_field3.type = "text";
+      show_btn3.classList.add("hide");
+    } else {
+      pass_field3.type = "password";
+      show_btn3.classList.remove("hide");
+    }
+  });
+</script>
+<script>
+  function hienThiDoiMatKhau() {
+    $(".detail__confirm-password").removeClass("undisplay");
+    $(".detail__confirm-password").addClass("display");
+    $(".my-password-title").addClass("active");
+    $(".my-profile-title").removeClass("active");
+    $(".detial__my-profile").addClass("undisplay");
+    $(".detial__my-profile").removeClass("display");
+  }
+  function hienThiDoiThongTin() {
+    $(".detial__my-profile").removeClass("undisplay");
+    $(".detial__my-profile").addClass("display");
+    $(".my-profile-title").addClass("active");
+    $(".my-password-title").removeClass("active");
+    $(".detail__confirm-password").addClass("undisplay");
+    $(".detail__confirm-password").removeClass("display");
+  }
+</script>
+<script>
+  $(document).ready(function () {
+    $(".big-img").imagezoomsl({
+      zoomrange: [3, 3]
+
+    });
+  });
+</script>
+<script>
+  function fadeInModal() {
+    $('.alert').fadeIn();
+    $('.overlay1').fadeIn();
+  }
+  function fadeOutModal() {
+    $('.alert').fadeOut();
+    $('.overlay1').fadeOut();
+  }
+  function fadeout() {
+    $('.overlay1').fadeOut();
+    $('.alert').fadeOut();
+  }
+  setInterval(fadeOutModal, 7000);
+</script>

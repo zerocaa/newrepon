@@ -11,7 +11,14 @@
 //         $(`#minus-${id}`).addClass("display");
 //         $(`#minus-${id}`).removeClass("undisplay");
 //     }
-// }
+// }    
+   
+    $('.checksize').click(function () {
+    var idsize = $(this).attr('id');
+    getSize(idsize);
+  })
+
+
 $(document).ready(function() {
     $('#filter').click(function(e){
         $('.filter-mobile').toggleClass('xyz');
