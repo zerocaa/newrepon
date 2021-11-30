@@ -1,6 +1,7 @@
 body {
   background-color: wheat;
-  font-size: 2rem !important; }
+  font-size: 2rem; 
+}
 
 h1 {
   color: #ce02bd; }
@@ -17,3 +18,6 @@ h4 {
 .top-link {
   border-bottom: 1px solid red;
   padding: 5px 0; }
+.product__comment {
+    font-size: 1rem;
+}

@@ -35,7 +35,28 @@ app.use(morgan("combined"));
     app.get("/product", (req, res) => {
       res.render("product");
     });
-   
+    app.get("/login", (req, res) => {
+      res.render("login");
+    });
+    app.get("/registration", (req, res) => {
+    res.render("registration");
+    });
+    app.get("/cart", (req, res) => {
+    res.render("cart");
+    });
+    app.get("/pay", (req, res) => {
+    res.render("pay");
+    }); 
+    app.get("/listlike", (req, res) => {
+    res.render("listlike");
+    }); 
+    app.get("/productDetail", (req, res) => {
+    res.render("productDetail");
+    }); 
+    app.get("/accountManagement", (req, res) => {
+    res.render("accountManagement");
+    }); 
+
   
     app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`);
