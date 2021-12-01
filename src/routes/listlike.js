@@ -2,11 +2,9 @@
 const express = require('express');
 //import router & newsController
 const router = express.Router();
-const newsController = require('../app/controllers/NewsController');
+const ListLikeController = require('../app/controllers/ListLikeController');
 
-
-//newController.index
-router.use('/', newsController.new);
+router.use('/', ListLikeController.listlike);
 
 //export router
 module.exports = router;

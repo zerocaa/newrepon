@@ -1,7 +1,7 @@
 
 class NewsController {
     //get /news
-    async index(req, res) {
+    async new(req, res) {
         res.render('news')
     }
     

@@ -5,8 +5,5 @@ class homeController {
         res.render('home')
     }
      //get / contact
-   
-   
-
 }
 module.exports = new homeController()

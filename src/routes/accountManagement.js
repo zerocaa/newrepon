@@ -2,11 +2,9 @@
 const express = require('express');
 //import router & newsController
 const router = express.Router();
-const newsController = require('../app/controllers/NewsController');
+const accountManagementController = require('../app/controllers/accountManagementController');
 
-
-//newController.index
-router.use('/', newsController.new);
+router.use('/', accountManagementController.accountManagement);
 
 //export router
 module.exports = router;
