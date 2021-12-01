@@ -4,71 +4,30 @@ const handlebars = require("express-handlebars");
 const morgan = require("morgan");
 const app = express();
 const port = 3000;
+
+const route = require("./routes");
 //http logger
 app.use(express.static(path.join(__dirname,'public')));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 // app.use(morgan("combined"));
 
     //template
-    app.engine(
+app.engine(
       "hbs",
       handlebars({
         extname: ".hbs",
       })
     );
- 
-    app.set("view engine", "hbs");
+ app.set("view engine", "hbs");
     app.set("views", path.join(__dirname, "resources\\views"));
 
-    app.get("/", (req, res) => {
-      res.render("home");
-    });
-    app.get("/intro", (req, res) => {
-      res.render("intro");
-    });
-    app.get("/news", (req, res) => {
-      res.render("news");
-    });
-    app.get("/contact", (req, res) => {
-      res.render("contact");
-    });
-    app.get("/product", (req, res) => {
-      res.render("product");
-    });
-    app.get("/login", (req, res) => {
-      res.render("login");
-    });
-    app.get("/registration", (req, res) => {
-    res.render("registration");
-    });
-    app.get("/cart", (req, res) => {
-    res.render("cart");
-    });
-    app.get("/pay", (req, res) => {
-    res.render("pay");
-    }); 
-    app.get("/listlike", (req, res) => {
-    res.render("listlike");
-    }); 
-    app.get("/productDetail", (req, res) => {
-    res.render("productDetail");
-    }); 
-    app.get("/accountManagement", (req, res) => {
-    res.render("accountManagement");
-    }); 
-    app.get("/newDetail", (req, res) => {
-    res.render("newDetail");
-    });
-    app.get("/search", (req, res) => {
-      res.render("search");
-      });
-    app.post("/search", (req, res) => {
-      res.render("search");
-      });
-    
-
+  //route
+route(app);
   
-    app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`);
+  
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
     });
 //3 là xóa hết rồi mình ghi đại 1 dòng h1 thôi. xong xác định đầu cuối
 //oke rồi thì mình sẽ tiến hành copy paste lại. trong trường hợp thấy css có thiếu thì em vô thằng home.hbs bổ sung thằng css vô thôi. còn cái mà asset thì a dạy em rồi. vd như asset/css/ thì muốn thay hết thành /css. mình ctrl H xong thay asset/ = /   biến đổi nguyên cả chuỗi thành 1 dấu / là oke okk a
