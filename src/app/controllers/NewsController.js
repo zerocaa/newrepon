@@ -4,5 +4,6 @@ class NewsController {
     async index(req, res) {
         res.render('news')
     }
+    
 }
 module.exports = new NewsController()
