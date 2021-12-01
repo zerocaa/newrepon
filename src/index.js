@@ -10,6 +10,8 @@ const route = require("./routes");
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+//import config/db/index.js
+const db = require("./config/db");
 // app.use(morgan("combined"));
 
     //template
@@ -17,11 +19,9 @@ app.engine(
       "hbs",
       handlebars({
         extname: ".hbs",
-      })
-    );
+      }));
  app.set("view engine", "hbs");
     app.set("views", path.join(__dirname, "resources\\views"));
-
   //route
 route(app);
   

@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const RegistrationController = require('../app/controllers/RegistrationController');
 
-router.use('/', RegistrationController.registration);
+router.get('/', RegistrationController.registration);
 
 //export router
 module.exports = router;

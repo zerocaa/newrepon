@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const ContactController = require('../app/controllers/ContactController');
 
-router.use('/', ContactController.contact);
+router.get('/', ContactController.contact);
 
 //export router
 module.exports = router;

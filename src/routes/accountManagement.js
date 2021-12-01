@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const accountManagementController = require('../app/controllers/accountManagementController');
 
-router.use('/', accountManagementController.accountManagement);
+router.get('/', accountManagementController.accountManagement);
 
 //export router
 module.exports = router;

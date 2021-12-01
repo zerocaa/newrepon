@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const PayController = require('../app/controllers/PayController');
 
-router.use('/', PayController.pay);
+router.get('/', PayController.pay);
 
 //export router
 module.exports = router;

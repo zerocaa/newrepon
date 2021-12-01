@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const IntroController = require('../app/controllers/IntroController');
 
-router.use('/', IntroController.intro);
+router.get('/', IntroController.intro);
 
 //export router
 module.exports = router;

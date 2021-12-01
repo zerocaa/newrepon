@@ -3,7 +3,7 @@ const homeRouter = require("./home");
 const productRouter = require("./product");
 const introRouter = require("./intro");
 const productDetailRouter = require("./productDetail");
-const payRouter = require("./pay");
+// const payRouter = require("./pay");
 const listlikeRouter = require("./listlike")
 const contactRouter = require("./contact");
 const accountManagementRouter = require("./accountManagement");
@@ -17,7 +17,7 @@ function route(app)
     app.use("/product", productRouter);
     app.use("/intro", introRouter);
     app.use("/productDetail", productDetailRouter);
-    app.use("/pay", payRouter);
+    // app.use("/pay", payRouter);
     app.use("/listlike", listlikeRouter);
     app.use("/contact", contactRouter);
     app.use("/accountManagement", accountManagementRouter);
