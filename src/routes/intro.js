@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const IntroController = require('../app/controllers/IntroController');
 
+//router
+router.get('/:slug', IntroController.slug);
 router.get('/', IntroController.intro);
 
 //export router
