@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const ListLikeController = require('../app/controllers/ListLikeController');
 
-router.get('/', ListLikeController.listlike);
+router.get('/', ListLikeController.index);
 
 //export router
 module.exports = router;
