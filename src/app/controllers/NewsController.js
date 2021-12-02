@@ -1,8 +1,14 @@
 
 class NewsController {
     //get /news
-    async new(req, res) {
+    new(req, res) {
         res.render('news')
+    }
+    newdetail(req, res) {
+        res.render('newDetail')
+    }
+    show(req, res) {
+        res.render('errorpage')
     }
     
 }

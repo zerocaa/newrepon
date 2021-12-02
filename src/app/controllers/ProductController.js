@@ -8,8 +8,8 @@ class ProductController {
     test(req, res) {
         res.render('productDetail')
     }
-    slug(req, res) {
-        res.send('vui long tro lai trang chu')
+    show(req, res) {
+        res.render('errorpage')
     }
 }
 module.exports = new ProductController()
