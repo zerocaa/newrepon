@@ -1,4 +1,4 @@
-const sell = require('../models/Sell');
+const sell = require('../models/Product');
 class ListLikeController {
     //get /news
     index(req, res) {

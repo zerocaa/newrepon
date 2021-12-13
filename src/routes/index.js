@@ -9,8 +9,8 @@ const contactRouter = require("./contact");
 const accountManagementRouter = require("./accountManagement");
 // const newDetailRouter = require("./newDetail");
 const cartRouter = require("./cart");
-const loginRouter = require("./login");
-const registrationRouter = require("./registration");
+// const loginRouter = require("./login");
+// const registrationRouter = require("./registration");
 function route(app)
 {
     app.use("/news", newsRouter);
@@ -23,8 +23,8 @@ function route(app)
     app.use("/accountManagement", accountManagementRouter);
     // app.use("/newDetail", newDetailRouter);
     app.use("/cart", cartRouter);
-    app.use("/login", loginRouter);
-    app.use("/registration", registrationRouter);
+    // app.use("/login", loginRouter);
+    // app.use("/registration", registrationRouter);
     app.use("/", homeRouter);
     
 }
