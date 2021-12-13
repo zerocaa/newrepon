@@ -4,14 +4,14 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const morgan = require("morgan");
 const app = express();
-const port = 3000;
+const port = 2503;
 const db = require("./config/db");
 const route = require("./routes");
 //http logger
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-//import config/db/index.js
+
 
 //connect db
 db.connectDB();

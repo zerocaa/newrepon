@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const CryptoJS = require("crypto-js");
+const PASS_SEC = 'hung'
 class homeController {
     //getsite 
     async home(req, res) {
@@ -15,7 +16,7 @@ class homeController {
         const newUser = new User({
             username: req.body.username,
             email: req.body.email,
-            password : CryptoJS.SHA256(req.body.password).toString()
+            password : req.body.password
         });
         newUser
             .save()
@@ -32,18 +33,20 @@ class homeController {
         async homelogin(req, res) {
             res.render('login')
         }
-        async postlogin(req, res)  {
-            try {
-                const user = await User.findOne({ username: req.body.username });
-                !user && res.status(400).send('Invalid email or password');
-                const hashedPassword = CryptoJS.AES.encrypt(user.password);
-                const password = hashedPassword.toString(CryptoJS.enc.Utf8);
-                password !== req.body.password && res.status(400).send('Invalid email or password');
-                res.status(200).send(user);
-            }
-            catch (err) {
-                res.status(400).send(err);
-            }
-        };
+        
+        async checklogin(req, res, next){
+            const user = await User.findOne({
+                username: req.body.username,
+                password: req.body.password
+            })
+            .then(data => {
+                if(data){
+                    res.json(data)
+                }}
+                )
+                .catch(err => {
+                    res.send("that bai " + err);
+                });          
+               }
 }
 module.exports = new homeController()

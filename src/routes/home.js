@@ -10,6 +10,6 @@ router.get('/registration', homeController.homeregistration);
 router.post('/registration', homeController.createUser);
 //login
 router.get('/login', homeController.homelogin);
-router.post('/login', homeController.postlogin);
+// router.post('/login', homeController.postlogin);
 //export router
 module.exports = router;
